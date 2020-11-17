@@ -1,0 +1,26 @@
+.product-item{
+    padding: 0.6em;
+    &:hover{
+        .card{
+            box-shadow: 0pt 2pt 5pt #eee;
+        }
+    }
+    .type{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: #ffe8c6;
+        padding: 2px 10px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    .card{
+        box-shadow: 0pt 0pt 1pt #eee;
+        padding: 1em;
+        .product-item-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

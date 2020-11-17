@@ -1,0 +1,18 @@
+<div class="login-container">
+    <div class="login-card">
+        <h4 class="text-center mb-4">Welcome back!</h4>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" formControlName="email" name="email_phone" class="form-control" required />
+          </div>
+          <div class="form-group mb-4">
+            <label>Password</label>
+            <input type="password" formControlName="password" name="password" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" [disabled]="!(loginForm.status=='VALID') && loading"> Log In </button>
+          </div>
+        </form>
+      </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="header" *ngIf="globals.token != null && globals.token !=''">
+    <div class="nav">
+        <div class="brand-logo">
+            <a [routerLink]="['/']">
+                <img style="height: 50px;" src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds.svg" />
+            </a>
+        </div>
+        <div class="links-bar" >
+            <a [routerLink]="['/cart']" class="btn btn-light btn-sm pl-3 pr-3">Cart ({{globals.cartItemCount}})</a>
+        </div>
+    </div>
+</div>

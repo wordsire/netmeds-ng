@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~ngx-toastr/toastr';
+
+body{
+    font-size: 14px;
+    background-color: #fafafa;
+}
+.row{
+    margin: 0;
+}
+.text-lg{
+    font-size: 16px;
+}
+.text-gray{
+    color: #777;
+}
+.flex-info-row {
+    display: flex;
+    justify-content: space-between;
+}

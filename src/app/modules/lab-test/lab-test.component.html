@@ -1,0 +1,12 @@
+<div class="lab-test-app">
+    <div style="padding: 3em 0" *ngIf="loading">
+        <center>Loading...</center>
+    </div>
+    <div *ngIf="!loading" style="max-width: 1140px; margin: auto;">
+        <div class="searchbar p-2 d-flex" >
+            <input type="text" name="search" placeholder="Search" [(ngModel)]="searchText" class="form-control" />
+            <button class="btn btn-outline-success" (click)="get_tests()">Go</button>
+        </div>
+        <app-product-item (emitter)="updateStatus($event)" [data]="testList" [gridView]="true" #productItem></app-product-item>
+    </div>
+</div>

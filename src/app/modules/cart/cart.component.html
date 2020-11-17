@@ -1,0 +1,42 @@
+<div class="lab-test-app mt-3">
+    <div style="max-width: 1140px; margin: auto;">
+        <div style="padding: 3em 0" *ngIf="loading">
+            <center>Loading...</center>
+        </div>
+        <div *ngIf="!loading && testList.length < 1" style="display: flex; justify-content: center; align-items: center; padding: 4em 1em;">
+            <div>
+                <h4>Cart Empty</h4>
+                <p class="text-gray">Looks like there is no item in your cart yet.</p>
+                <a [routerLink]="['/test']">Browse Tests</a>
+            </div>
+        </div>
+        <div class="row" *ngIf="testList.length > 0">
+            <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-0">
+                <h5 class="pl-2">Order Overview</h5>
+                <app-product-item (emitter)="updateStatus($event)" [data]="testList" [gridView]="false" [cartView]="true" #productItem></app-product-item>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 col-12 p-0 cart-total">
+                <div class="p-2 sticky-box" style="position: sticky; top: 5em;">
+                    <h5>Price Details</h5>
+                    <div class="card p-3">
+                        <div class="flex-info-row">
+                            <span>Total Price</span>
+                            <span>&#x20B9; {{payment.netAmount}}</span>
+                        </div>
+                        <div class="flex-info-row">
+                            <span>GST & Charges</span>
+                            <span>&#x20B9; {{payment.charges}}</span>
+                        </div>
+                        <div class="flex-info-row total-amount">
+                            <span>Total Amount</span>
+                            <span>&#x20B9; {{payment.final}}</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-block">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

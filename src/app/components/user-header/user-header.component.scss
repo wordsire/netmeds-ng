@@ -1,0 +1,21 @@
+.header{
+    background: #32aeb1;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    .nav{
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em;
+        .brand-logo{
+            font-size: 20px;
+        }
+        .links-bar{
+            display: flex;
+            margin: auto;
+            margin-right: 0;
+        }
+    }
+}
