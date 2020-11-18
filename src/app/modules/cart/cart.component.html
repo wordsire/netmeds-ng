@@ -1,7 +1,7 @@
 <div class="lab-test-app mt-3">
     <div style="max-width: 1140px; margin: auto;">
-        <div style="padding: 3em 0" *ngIf="loading">
-            <center>Loading...</center>
+        <div style="padding: 3em 0; text-align: center;" *ngIf="loading">
+            <p>Loading...</p>
         </div>
         <div *ngIf="!loading && testList.length < 1" style="display: flex; justify-content: center; align-items: center; padding: 4em 1em;">
             <div>

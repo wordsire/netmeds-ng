@@ -1,3 +1,3 @@
 export const Config: any = {
-    API_URL: 'http://localhost:4100/api'
+    API_URL: 'http://test.examdedo.com/api'
 }
